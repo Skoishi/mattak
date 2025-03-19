@@ -43,7 +43,9 @@ namespace mattak
       /* In theory, the number of samples pretrigger, but not yet filled properly. */
       uint16_t pretrigger_samples = 0;
 
-      /* The readout time, as a UTC double. This is the time the event made it to the SBC */
+      /* The readout time, as a UTC double. This is the time the event made it to the SBC 
+       * The readout time is the time when the event is read out. 
+       * I.e. it will be always later than the trigger time (a fraction of a second later) but not related to any start/end in the trace */
       double readout_time = 0;
 
       /* The number of PPS (pulse per second) received since the start of the run by the RADIANT. WARNING: this can slip */
